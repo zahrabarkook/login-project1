@@ -1,0 +1,21 @@
+<form [formGroup]="loginForm">
+  <section style="width: 100vw; height: 100vh" class="d-flex col-12 justify-content-center">
+    <div class="d-flex  flex-direction: column d-inline-flex  align-items-center justify-content-center">
+    <div class="card justify-content-center align-items-center">
+      <mat-form-field appearance="outline">
+        <mat-label>Email Address</mat-label>
+          <input matInput placeholder="example@gmail.com"  type="email" formControlName="loginEmail">
+        <mat-error *ngIf="loginForm.controls['loginEmail'].invalid"></mat-error>
+      </mat-form-field>
+      <div>
+        <mat-form-field appearance="outline">
+          <mat-label>your Password</mat-label>
+            <input matInput placeholder="password"  type="password" formControlName="loginPassword">
+          <mat-error *ngIf="loginForm.controls['loginPassword'].invalid"></mat-error>
+        </mat-form-field>
+      </div>
+        <button type="submit" class="btn btn-primary" [disabled]="loginForm.invalid" (click)="logincliked()" >log in</button>
+    </div>  
+    </div>
+ </section>
+  </form>

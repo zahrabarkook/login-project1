@@ -1,0 +1,11 @@
+<div class=" d-flex col-12 justify-content-center  align-items-center flex-wrap">
+    <div class="d-flex col-12 justify-content-center  flex-wrap ">
+      <div class="card col-3 d-flex pl-2 flex-wrap  justify-content-center align-items-center mx-3"  *ngFor="let items of user"  style="margin-top:16px; border:1px solid green">
+        <div class="card-header">
+          <img [src]="items.avatar_url" class="size col-12 d-flex justify-content-center" >
+        </div>
+        <h5 class="card-title">{{items.login}}</h5>
+        <button  class=" col-12">fallower</button>
+    </div>
+  </div>
+</div>

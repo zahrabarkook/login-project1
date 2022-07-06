@@ -1,3 +1,4 @@
+import { OnInit } from '@angular/core';
 import { TestBed } from '@angular/core/testing';
 import { RouterTestingModule } from '@angular/router/testing';
 import { AppComponent } from './app.component';
@@ -20,16 +21,31 @@ describe('AppComponent', () => {
     expect(app).toBeTruthy();
   });
 
-  it(`should have as title 'login-project'`, () => {
+  it(`should have as title 'forms'`, () => {
     const fixture = TestBed.createComponent(AppComponent);
     const app = fixture.componentInstance;
-    expect(app.title).toEqual('login-project');
+    expect(app.title).toEqual('forms');
   });
 
   it('should render title', () => {
     const fixture = TestBed.createComponent(AppComponent);
     fixture.detectChanges();
     const compiled = fixture.nativeElement as HTMLElement;
-    expect(compiled.querySelector('.content span')?.textContent).toContain('login-project app is running!');
+    expect(compiled.querySelector('.content span')?.textContent).toContain('forms app is running!');
   });
 });
+
+
+// class MyComponent implements OnInit {
+//   ngOnInit() {
+//   export class OnInit {
+//   toggle = true;
+// status = 'Enable'; 
+
+// enableDisableRule(job: any) {
+//     this.toggle = !this.toggle;
+//     this.status = this.toggle ? 'Enable' : 'Disable';
+// }
+//   }
+// }}
+
